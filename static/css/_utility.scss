@@ -1,0 +1,193 @@
+// Resets
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+ul {
+    list-style: none;
+}
+
+img {
+    width: 100%;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+
+.container {
+    max-width: $max-width;
+    margin: auto;
+    padding: 0 2rem;
+    overflow: hidden;
+}
+
+
+// Tag styling
+%tag-shared {
+    display: inline-block;
+    color: #fff;
+    font-size: 0.55rem;
+    text-transform: uppercase;
+    padding: 0.4rem 0.6rem;
+    border-radius: 15px;
+    margin-bottom: 0.5rem;
+    width: fit-content;
+}
+
+.tag {
+    &-primary {
+        @extend %tag-shared;
+        background: $primary-color;
+    }
+
+    &-secondary {
+        @extend %tag-shared;
+        background: $secondary-color;
+    }
+
+    &-tertiary {
+        @extend %tag-shared;
+        background: $tertiary-color;
+    }
+}
+
+
+// Buttons
+%btn-shared {
+    display: inline-block;
+    border: none;
+    background: $dark-color;
+    color: #fff;
+    padding: 0.8rem 2rem;
+    transition: all 0.5s;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.btn {
+    &-light {
+        background: $light-color;
+        color: set-text-color($light-color);
+        @extend %btn-shared;
+    }
+
+    &-dark {
+        background: $dark-color;
+        color: set-text-color($dark-color);
+        @extend %btn-shared;
+    }
+
+    &-primary {
+        background: $primary-color;
+        color: set-text-color($primary-color);
+        @extend %btn-shared;
+
+        &:hover {
+            background: lighten($primary-color, 17%) !important;
+        }
+    }
+
+    &-secondary {
+        background: $secondary-color;
+        color: set-text-color($secondary-color);
+        @extend %btn-shared;
+    }
+
+    &-tertiary {
+        background: $tertiary-color;
+        color: set-text-color($tertiary-color);
+        @extend %btn-shared;
+    }
+}
+
+button[class^='btn-']:hover,
+a[class^='btn-']:hover,
+input[class^='btn-']:hover {
+    background: $primary-color;
+}
+
+
+// Headings
+.l-heading {
+    font-size: 4rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.1;
+}
+
+.m-heading {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.1;
+}
+
+.lead {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+
+// Cards
+.card {
+    padding: 1rem;
+    background: #fff;
+}
+
+
+// Paddings & Margins
+.py-1 {
+    padding: 1rem 0;
+}
+
+.py-2 {
+    padding: 2rem 0;
+}
+
+.py-3 {
+    padding: 3rem 0;
+}
+
+.p-1 {
+    padding: 1rem;
+}
+
+.p-2 {
+    padding: 2rem
+}
+
+.p-3 {
+    padding: 3rem
+}
+
+.my-1 {
+    margin: 1rem 0;
+}
+
+.my-2 {
+    margin: 2rem 0;
+}
+
+.my-3 {
+    margin: 3rem 0;
+}
+
+.m-1 {
+    margin: 1rem;
+}
+
+.m-2 {
+    margin: 2rem
+}
+
+.m-3 {
+    margin: 3rem
+}
